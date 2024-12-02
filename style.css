@@ -1,0 +1,160 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 150px; 
+    background-color: #1e1e2f;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+/* Sidebar Navigation */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #3b3b4f;
+}
+
+/* Main Content */
+.content {
+    margin-left: 250px; /* Shift the content to the right to make space for the sidebar */
+    padding: 40px;
+    background-color: #f9f9f9;
+    width: calc(100% - 250px); /* Adjust width to fit alongside the sidebar */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007bff;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 20%;
+    min-width: 280px; /* Ensure features stack on smaller screens */
+    box-sizing: border-box;
+}
+
+.feature h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1em;
+}
+
+.feature .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.feature .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1e1e2f;
+    color: white;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
